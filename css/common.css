@@ -267,9 +267,17 @@ ul {
   margin-left: 69px;
 }
 
+.social-title {
+  font-weight: 700;
+  font-style: 14px;
+  line-height: 1.14;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .link-social {
   display: inline-flex;
-  margin-top: 21px;
+  padding-top: 21px;
 }
 
 .link-item {
@@ -314,6 +322,31 @@ ul {
   transition-timing-function: var(--timing-function);
 }
 
+.mailing-title {
+  font-weight: 700;
+  font-style: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.mail-ctr {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.mail-form {
+  width: 358px;
+  height: 50px;
+  padding: 18px 12px;
+  margin-top: 21px;
+  color: var(--title-text-color);
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 .sign-up {
   display: inline-flex;
   align-items: center;
@@ -323,6 +356,8 @@ ul {
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 900;
+  position: absolute;
+  bottom: 0px;
   padding: 10px;
   padding-left: 29px;
   text-align: center;
