@@ -54,11 +54,43 @@
             </h1>
             <button class="order-service" data-modal-open>Заказать услугу</button>
             <div class="backdrop is-hidden" data-modal>
-              <div class="modal">
-                <button data-modal-close>хана</button>
-              </div>
-            </div>
-            
+              <form autocomplete="off">
+                <div class="modal">
+                  <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                  <div class="form-field">
+                    <label class="label-person" for="name"><svg class="person-icon">
+                      <use href="./images/modal-spt.svg#person-black"></use>
+                    </svg></label>
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                  </div>
+                  <div class="form-field">
+                    <label class="label-phone" for="tel"><svg class="phone-icon">
+                      <use href="./images/modal-spt.svg#phone-black"></use>
+                    </svg></label>
+                    <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                  </div>
+                  <div class="form-field">
+                    <label class="label-email" for="mail"><svg class="email-icon">
+                      <use href="./images/modal-spt.svg#email-black"></use>
+                    </svg></label>
+                    <input type="email" name="mail" id="mail" placeholder="Почта">
+                  </div>
+                  <div class="form-field">
+                    <label for="comment"></label>
+                    <textarea class="textarea" name="comment" id="comment" rows="8" placeholder="Комментарий"></textarea>
+                  </div>
+                  <div class="form-policy">
+                    <input type="checkbox" name="policy" id="policy" />
+                    <label for="policy">Соглашаюсь с рассылкой и принимаю <a class="agreement-conditions" href="">Условия
+                        договора</a></label>
+                  </div>
+                  <button class="btn-submit" type="submit">Отправить</button>
+                  <button class="btn-close" data-modal-close><svg class="close-icon">
+                      <use href="./images/modal-spt.svg#close"></use>
+                    </svg></button>
+                </div>
+              </form>
+            </div>         
           </div>
         </section>
       <!--Переваги-->
@@ -411,7 +443,7 @@
       </div>
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
-    
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
