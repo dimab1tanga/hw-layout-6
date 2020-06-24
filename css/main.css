@@ -142,6 +142,8 @@ ul {
   border: var(--accent-color);
 }
 
+/* МОДАЛКА */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -182,23 +184,31 @@ ul {
 
 .form-field {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
   margin-bottom: 28px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 .form-field:nth-child(5) {
   margin-bottom: 20px;
 }
 
-.form-field input {
+.form-input {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+/* .form-field input {
   border: none;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-}
+} */
 
 .form-field input::placeholder {
   font-weight: 400;
@@ -210,8 +220,9 @@ ul {
 
 .textarea {
   resize: none;
-  border: none;
   padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .form-policy {
@@ -266,18 +277,33 @@ ul {
   height: 30px;
 }
 
-.label-person {
-  position: relative;
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-45px);
+  left: 16px;
+  color: var(--accent-color);
 }
 
 .person-icon {
   position: absolute;
-  top: 11px;
-  right: 8px;
-  bottom: 11px;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
+  display: inline-block;
   width: 18px;
   height: 18px;
+}
+
+.form-input:focus ~ .person-icon {
+  background-color: var(--accent-color);
 }
 
 .label-phone {
