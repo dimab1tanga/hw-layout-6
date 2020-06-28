@@ -179,7 +179,6 @@ ul {
 /* Footer */
 
 .footer {
-  min-width: 1600px;
   background-color: #2f303a;
   color: var(--title-text-color);
   /* outline: 3px solid black; */
@@ -187,7 +186,7 @@ ul {
 
 .ftr-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
   /* outline: 2px solid yellow; */
   width: 1200px;
@@ -264,8 +263,6 @@ ul {
 .social-box {
   justify-content: space-evenly;
   /* outline: 1px solid brown; */
-  margin-right: 94px;
-  margin-left: 69px;
 }
 
 .social-title {
@@ -321,6 +318,10 @@ ul {
   background-color: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+}
+
+.form {
+  margin-right: 216px;
 }
 
 .mailing-title {
